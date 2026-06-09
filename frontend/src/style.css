@@ -1,0 +1,96 @@
+:root {
+  --color-primary: #0a0e17; /* Deep Midnight Blue */
+  --color-accent: #d4af37;  /* Rich Gold */
+  --color-accent-hover: #f1c40f;
+  --color-text: #fdfdfd;   /* Ivory White */
+  --color-text-muted: #a0a0a0;
+  --color-bg-light: #161b22;
+  --color-bg-card: rgba(255, 255, 255, 0.03);
+  --color-border: rgba(212, 175, 55, 0.2);
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  transition: all 0.3s ease;
+}
+
+.luxury-btn {
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.luxury-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.luxury-card {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.luxury-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Glassmorphism input */
+input, textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
